@@ -25,7 +25,6 @@ function Card() {
     })
     const handleOnClick = () => {
         axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=d8596b1261b43be39522177d29112a96`).then((response) => {
-            console.log(response.data);
             setData({
                 desc: response.data.weather[0].main,
                 icon: response.data.weather[0].icon,
@@ -88,9 +87,9 @@ function Card() {
                                         <h3>{0} °C</h3></div>
                                     <div className="box"><h4>Min Temp</h4>
                                         <h3>{0} °C</h3></div>
-                                    <div className="box">
-                                        <h3>Humidity</h3>
-                                        <h3>{0}</h3></div>
+                                    <div className="box"><h3>Wind Speed</h3>
+                                        <h3>{"--"}</h3></div>
+                                  
                                     <div className="box"><h3>Feels like</h3>
                                         <h2>{"--"}</h2></div>
                                     <div className="box"><h3>Sunrise</h3>
@@ -101,8 +100,9 @@ function Card() {
                                         <h3>{"--"}</h3></div>
                                     <div className="box"><h3>Pressure</h3>
                                         <h3>{"--"}</h3></div>
-                                    <div className="box"><h3>Wind Speed</h3>
-                                        <h3>{"--"}</h3></div>
+                                    <div className="box">
+                                        <h3>Humidity</h3>
+                                        <h3>{0}</h3></div>
                                 </div>
                             </>
                         ) : (
@@ -124,11 +124,12 @@ function Card() {
                                             <img src={cold} className="img" alt="min_temp" />
                                         </div>
                                         <h3>{data.temp_min} °C</h3></div>
-                                    <div className="box"><h3>Humidity</h3>
+                                    <div className="box"><h3>Wind Speed</h3>
                                         <div className="border">
-                                            <img src={humidity} className="img" alt="humidity" />
+                                            <img src={wind} className="img" alt="sunrise" />
                                         </div>
-                                        <h3>{data.humidity}</h3></div>
+                                        <h3>{data.windSpeed}</h3></div>
+
                                     <div className="box"><h3>Feels Like</h3>
                                         <div className="border">
                                             <img src={cloudy} className="img" alt="weather" />
@@ -149,11 +150,11 @@ function Card() {
                                             <img src={pressure} className="img" alt="pressure" />
                                         </div>
                                         <h3>{data.pressure}</h3></div>
-                                    <div className="box"><h3>Wind Speed</h3>
+                                    <div className="box"><h3>Humidity</h3>
                                         <div className="border">
-                                            <img src={wind} className="img" alt="sunrise" />
+                                            <img src={humidity} className="img" alt="humidity" />
                                         </div>
-                                        <h3>{data.windSpeed}</h3></div>
+                                        <h3>{data.humidity}</h3></div>
                                 </div>
                             </>
                         )}

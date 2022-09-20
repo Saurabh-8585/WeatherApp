@@ -94,9 +94,11 @@ body {
 
 }
 
-.box:hover {
+.box:hover,
+.btn:hover {
     background-color: #696fd4;
 }
+
 
 
 
@@ -115,7 +117,73 @@ body {
     border-radius: 50%;
 }
 
+/* responsive */
+@media (min-width:768px)and (max-width:912px) {
+    .card {
+        width: 33rem;
+        height: 36rem;
+    }
 
+    .boxes {
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+    .box{
+        margin: 0.7rem;
+    }
+
+    .inputData {
+        margin: 2rem 0;
+    }
+
+    .inputField {
+        width: 16rem;
+    }
+
+    .btn {
+        width: 8rem;
+        height: 2.5rem;
+
+    }
+}
+
+@media (min-width:912px)and (max-width:2000px) {
+    .card {
+        margin-top: 3rem;
+        width: 43rem;
+        height: 33rem;
+    }
+
+    .boxes {
+        margin-top: 2rem;
+    }
+    .box{
+        margin:1rem;
+    }
+
+    .inputData {
+        margin: 2rem 0;
+      
+    }
+
+    .inputField {
+        width: 16rem;
+        margin-right: 9rem;
+    }
+
+    .btn {
+        width: 8rem;
+        height: 2.5rem;
+
+    }
+}
+
+
+
+
+
+
+/* background animations */
 
 .area {
     background: #4e54c8;
