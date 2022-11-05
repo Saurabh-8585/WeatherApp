@@ -49,7 +49,7 @@ body {
     margin-left: 1rem;
     font-size: 0.8rem;
     font-weight: 550;
-    background-color: #4e54c8;
+    background-color:#b42ce5;
     color: white;
     cursor: pointer;
 
@@ -84,7 +84,7 @@ body {
     margin: 0 1rem 0.5rem 1rem;
     height: 5.5rem;
     width: 8rem;
-    background-color: #4e54c8;
+    background-color: #b42ce5;
     color: white;
     border-radius: 1rem;
     display: flex;
@@ -107,10 +107,14 @@ body {
     width: 2rem;
     border-radius: 50%;
     bottom: 6rem;
-    background-color: white;
-
+    /* background-color: white; */
+    
 }
 
+.icon-img{
+   height: 40px;
+   width: 40px;
+}
 .img {
     height: 100%;
     width: 100%;
@@ -186,7 +190,7 @@ body {
 /* background animations */
 
 .area {
-    background: #4e54c8;
+    background: #b42ce5;
     background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
     width: 100%;
     height: 100vh;
